@@ -5,4 +5,7 @@ WORKDIR /go/src/github.com/gotty/gotty
 COPY . .
 RUN go mod tidy && go mod vendor
 RUN go build -o /usr/bin/gotty
+RUN apk add docker
+RUN chmod +x shell.sh && cp shell.sh /usr/bin/shell
+WORKDIR /
 CMD ["/usr/bin/gotty"]
