@@ -5,7 +5,7 @@ go 1.16
 require (
 	github.com/NYTimes/gziphandler v0.0.0-20170804200234-967539e5e271
 	github.com/codegangsta/cli v1.19.1
-	github.com/elazarl/go-bindata-assetfs v0.0.0-20150813044622-d5cac425555c
+	github.com/elazarl/go-bindata-assetfs v1.0.1
 	github.com/fatih/structs v0.0.0-20150526064352-a9f7daa9c272
 	github.com/gorilla/websocket v0.0.0-20150811171432-b6ab76f1fe98
 	github.com/hashicorp/go-multierror v0.0.0-20150608033521-56912fb08d85 // indirect
