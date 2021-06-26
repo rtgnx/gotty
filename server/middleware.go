@@ -94,6 +94,8 @@ func (server *Server) wrapForwardBasicAuth(handler http.Handler, forwardAuthServ
 			for k, v := range res.Header {
 				log.Printf("Updating Headers %s = %v\n", k, v)
 				r.Header.Set(k, strings.Join(v, ","))
+				// Replace - with _ for Environment variables to be accessible
+				k = strings.Replace(k, "-", "_", -1)
 				os.Setenv(k, strings.Join(v, ","))
 			}
 			log.Printf("Basic Authentication Succeeded: %s", r.RemoteAddr)
