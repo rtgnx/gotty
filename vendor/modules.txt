@@ -4,7 +4,7 @@ github.com/NYTimes/gziphandler
 # github.com/codegangsta/cli v1.19.1
 ## explicit
 github.com/codegangsta/cli
-# github.com/elazarl/go-bindata-assetfs v0.0.0-20150813044622-d5cac425555c
+# github.com/elazarl/go-bindata-assetfs v1.0.1
 ## explicit
 github.com/elazarl/go-bindata-assetfs
 # github.com/fatih/structs v0.0.0-20150526064352-a9f7daa9c272

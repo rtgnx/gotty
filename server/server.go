@@ -14,10 +14,9 @@ import (
 	"time"
 
 	"github.com/NYTimes/gziphandler"
-	"github.com/elazarl/go-bindata-assetfs"
+	assetfs "github.com/elazarl/go-bindata-assetfs"
 	"github.com/gorilla/websocket"
 	"github.com/pkg/errors"
-
 	"github.com/yudai/gotty/pkg/homedir"
 	"github.com/yudai/gotty/pkg/randomstring"
 	"github.com/yudai/gotty/webtty"
@@ -199,6 +198,11 @@ func (server *Server) setupHandlers(ctx context.Context, cancel context.CancelFu
 	if server.options.EnableBasicAuth {
 		log.Printf("Using Basic Authentication")
 		siteHandler = server.wrapBasicAuth(siteHandler, server.options.Credential)
+	}
+
+	if server.options.EnableForwardAuth {
+		log.Printf("Using Forward Auth Service")
+		siteHandler = server.wrapForwardBasicAuth(siteHandler, server.options.ForwardAuthServer)
 	}
 
 	withGz := gziphandler.GzipHandler(server.wrapHeaders(siteHandler))
