@@ -8,6 +8,7 @@ require (
 	github.com/elazarl/go-bindata-assetfs v1.0.1
 	github.com/fatih/structs v0.0.0-20150526064352-a9f7daa9c272
 	github.com/gorilla/websocket v0.0.0-20150811171432-b6ab76f1fe98
+	github.com/gotty/gotty v0.0.0-20210121085047-3a1fd79fcbe2 // indirect
 	github.com/hashicorp/go-multierror v0.0.0-20150608033521-56912fb08d85 // indirect
 	github.com/kr/pty v0.0.0-20150511174710-5cf931ef8f76
 	github.com/pkg/errors v0.8.1-0.20161029093637-248dadf4e906
